@@ -78,4 +78,9 @@ try:
     with open("messages.json", "r") as f:
         messages = json.load(f)
 except FileNotFoundError:
-    message
+    messages = []
+
+# Message de succès (optionnel)
+if 'message' in locals():
+    st.success(message)
+
